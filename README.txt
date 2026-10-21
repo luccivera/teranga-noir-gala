@@ -1,21 +1,25 @@
 TERENAGA NOIR GALA — website files
 
-index.html   The whole page. Desktop layout first, mobile layout second (search "tn-mobile").
-styles.css   Colours, fonts, animations and the desktop/mobile switch (900px).
-main.js      Opens and closes the mobile menu.
-assets/      favicon.svg, og-image.jpg (link preview). Add hero.mp4, hero-poster.jpg and photos here.
+index.html   The words and structure of the page. One copy that works on every screen size.
+styles.css   All the styling: colours (top of the file), fonts, layout, animations.
+             Sections are labelled with comments. Phone styles are near the bottom,
+             under "@media (max-width: 899px)"; tablet styles just above them.
+main.js      Fills in content.js, runs the hero video, the menu and "Add to calendar".
+assets/      favicon.svg, og-image.jpg (link preview), print-wide.svg and print-band.svg
+             (the African print bands). Add hero.mp4, hero-poster.jpg and photos here.
 
 HOW TO UPDATE THE DETAILS (date, prices, links, emails…)
   1. Open content.js in any text editor (TextEdit, Notepad, VS Code).
   2. Fill in the values between the quotes. Leave the quotes and commas.
-  3. Save, then re-upload the whole folder to Cloudflare (Create new deployment).
-  Everything updates on desktop AND mobile, including the "Add to calendar" file.
+  3. Save, then commit and push. Cloudflare updates the site in a minute or two.
+  Everything updates everywhere, including the "Add to calendar" file.
   Anything left as "" keeps its [placeholder] showing, so you can see what is missing.
 
-To change longer wording (descriptions, headings), edit index.html. Text appears twice
-(desktop + mobile), so change both.
+To change longer wording (descriptions, headings), edit index.html. Each piece of text
+appears once, so one edit changes desktop and phone.
 
-Hero film: see the comment "HERO FILM" in index.html.
+To change how something looks, find its class name in index.html (e.g. class="tier")
+and search for it in styles.css.
 
 COMMUNITY PHOTOS
 Drop these five files into assets/photos/ (exact names, .jpg, about 1600px on the long side):
