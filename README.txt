@@ -18,15 +18,12 @@ To change longer wording (descriptions, headings), edit index.html. Text appears
 Hero film: see the comment "HERO FILM" in index.html.
 
 COMMUNITY PHOTOS
-Drop these eight files into assets/photos/ (exact names, .jpg, about 1600px on the long side):
+Drop these five files into assets/photos/ (exact names, .jpg, about 1600px on the long side):
   elders.jpg         - community elders (18 Years of Impact)
   town-hall.jpg      - town hall (18 Years of Impact)
   blood-drive.jpg    - blood drive (The Power of Your Giving)
   girls-program.jpg  - young girls program (The Power of Your Giving)
   staff.jpg          - staff group photo (The Future We Build Together)
-  performance.jpg    - performance (The Evening)
-  dining.jpg         - dining (The Evening)
-  celebration.jpg    - celebration (The Evening)
 Until a file is there, a dark red placeholder shows in its place. Photos are cropped to fit, so keep faces near the centre.
 
 HERO VIDEO
