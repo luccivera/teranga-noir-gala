@@ -202,3 +202,6 @@ html{scroll-behavior:smooth}
 @keyframes tn-treeIn{from{opacity:.2;transform:scale(.94) translateY(20px)}to{opacity:1;transform:none}}
 @keyframes tn-treeGrow{from{opacity:.3;transform:scale(.6)}to{opacity:1;transform:none}}
 }}
+/* The Evening photos: drop performance.jpg, dining.jpg, celebration.jpg into assets/photos */
+.tn-photo{position:relative;overflow:hidden}
+.tn-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(0.92) sepia(0.12) contrast(1.05) brightness(0.97)}
