@@ -284,7 +284,20 @@ section[id] { scroll-margin-top: 0; }
 
 /* The Experience */
 .section--experience { border-top: 1px solid rgba(233, 181, 44, 0.18); }
-.experience { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 72px; align-items: start; margin-bottom: 72px; }
+.experience__statement {
+  max-width: 900px; margin: 16px auto 72px; text-align: center; text-wrap: balance;
+  font-family: var(--serif); font-size: clamp(26px, 2.6vw, 36px); line-height: 1.38; color: var(--gold-text);
+}
+.experience {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; align-items: start;
+  padding-top: 40px; border-top: 1px solid var(--gold-line-soft);
+}
+.experience .text { font-size: 15px; line-height: 1.75; color: var(--taupe); }
+.experience__gt {
+  max-width: 760px; margin: 64px auto 72px; text-align: center; text-wrap: balance;
+  font-family: var(--script); font-style: italic; font-size: 30px; line-height: 1.35; color: var(--gold-text);
+}
+.experience .more-btn { display: none; }
 
 .details {
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 64px;
@@ -322,7 +335,7 @@ section[id] { scroll-margin-top: 0; }
 .section--meaning { padding: 150px var(--gutter) 140px; background: linear-gradient(180deg, var(--black) 0%, #1a0605 55%, var(--oxblood-dark) 100%); }
 .section--meaning .section-head { margin-bottom: 80px; }
 .meaning { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
-.meaning__word { font-family: var(--serif); font-size: clamp(64px, 6.5vw, 96px); line-height: 1; padding: 0.06em 0.06em 0; color: var(--ivory); }
+.meaning__word { font-family: var(--serif); font-size: clamp(64px, 6.5vw, 96px); line-height: 1; padding: 0.06em 0.06em 0.2em; margin-bottom: -0.14em; color: var(--ivory); }
 .meaning__word.foil { color: transparent; }
 .meaning__text { font-size: 19px; line-height: 1.7; color: #f5e6c8; }
 .meaning__text--soft { color: var(--sand); }
@@ -332,17 +345,20 @@ section[id] { scroll-margin-top: 0; }
 .meaning__more { max-width: 780px; margin: 88px auto 0; display: flex; flex-direction: column; gap: 22px; text-align: center; }
 
 /* Read more */
-.read-more summary {
+.read-more summary, .more-btn {
   display: inline-flex; align-items: center; gap: 12px; min-height: 44px; cursor: pointer; list-style: none;
   font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text);
 }
 .read-more summary::-webkit-details-marker { display: none; }
-.read-more summary::after {
+.read-more summary::after, .more-btn::after {
   content: "+"; display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
   border: 1px solid rgba(233, 181, 44, 0.7); border-radius: 50%; font-size: 16px; letter-spacing: 0; transition: transform 0.3s ease;
 }
-.read-more[open] summary::after { transform: rotate(45deg); }
-.read-more summary:hover { color: var(--gold-light); }
+.read-more[open] summary::after, .more-btn[aria-expanded="true"]::after { transform: rotate(45deg); }
+.more-btn { padding: 0; background: none; border: 0; font-family: inherit; }
+.more-btn__close, .more-btn[aria-expanded="true"] .more-btn__open { display: none; }
+.more-btn[aria-expanded="true"] .more-btn__close { display: inline; }
+.read-more summary:hover, .more-btn:hover { color: var(--gold-light); }
 .read-more__close, .read-more[open] .read-more__open { display: none; }
 .read-more[open] .read-more__close { display: inline; }
 .read-more__body { display: flex; flex-direction: column; gap: 20px; padding: 14px 0 6px; }
@@ -589,7 +605,13 @@ section[id] { scroll-margin-top: 0; }
 
   .welcome { gap: 22px; }
 
-  .experience { grid-template-columns: 1fr; gap: 22px; margin-bottom: 22px; }
+  .experience__statement { font-size: 24px; margin: 8px auto 36px; }
+  .experience { grid-template-columns: 1fr; gap: 22px; padding-top: 32px; }
+  .experience .text { font-size: 16px; }
+  .experience__more { display: none; }
+  .experience.is-open .experience__more { display: block; }
+  .experience .more-btn { display: inline-flex; justify-self: start; }
+  .experience__gt { font-size: 26px; margin: 40px auto; }
   .details { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 0; }
   .details__item { padding: 20px 16px; gap: 8px; }
   .details__item + .details__item { border-left: 0; }

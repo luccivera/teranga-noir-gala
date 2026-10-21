@@ -108,6 +108,17 @@
     });
   }
 
+  // ---------- Experience "Read more" (phones only) ----------
+  var moreBtn = document.querySelector('.more-btn');
+  if (moreBtn) {
+    var moreBox = document.getElementById(moreBtn.getAttribute('aria-controls'));
+    moreBtn.addEventListener('click', function () {
+      var open = moreBtn.getAttribute('aria-expanded') !== 'true';
+      moreBtn.setAttribute('aria-expanded', String(open));
+      moreBox.classList.toggle('is-open', open);
+    });
+  }
+
   // ---------- Mobile menu ----------
   var menuBtn = document.querySelector('.menu-btn');
   var menu = document.getElementById('menu');
