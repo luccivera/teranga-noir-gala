@@ -28,3 +28,11 @@ Drop these eight files into assets/photos/ (exact names, .jpg, about 1600px on t
   dining.jpg         - dining (The Evening)
   celebration.jpg    - celebration (The Evening)
 Until a file is there, a dark red placeholder shows in its place. Photos are cropped to fit, so keep faces near the centre.
+
+HERO VIDEO
+Put these in assets/video/ (create the folder):
+  hero.mp4          - 10-20 second loop, no sound needed (it plays muted), MP4 (H.264), 1920x1080, ideally under 8 MB
+  hero-poster.jpg   - a still from the video; shows while it loads
+The video only loads when the file is there; otherwise the red glow shows as before.
+A pause button appears over the video (needed for accessibility). Visitors with "reduce motion" on see the still frame.
+

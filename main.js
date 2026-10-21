@@ -51,6 +51,23 @@
     document.querySelectorAll('[data-ics]').forEach(function(a){ a.href=url; a.download='teranga-noir-gala.ics'; });
   }
 
+  // ---- hero video (assets/video/hero.mp4) ----
+  // Loads only the visible hero (desktop or mobile). No autoplay for "reduce motion" users.
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.tn-hero-video').forEach(function(v){
+    if (v.offsetParent === null) return;               // hidden layout: don't download
+    var hero = v.closest('section'), btn = hero.querySelector('.tn-video-btn');
+    var setBtn = function(paused){ if(!btn) return; btn.hidden=false; btn.classList.toggle('is-paused', paused);
+      btn.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video'); };
+    v.addEventListener('playing', function(){ hero.classList.add('has-video'); setBtn(false); });
+    v.addEventListener('loadeddata', function(){ if (reduce){ hero.classList.add('has-video'); setBtn(true); } });
+    v.preload = 'auto'; v.src = v.getAttribute('data-src');
+    if (!reduce) { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+    if (btn) btn.addEventListener('click', function(){
+      if (v.paused) { v.play(); setBtn(false); } else { v.pause(); setBtn(true); }
+    });
+  });
+
   // ---- mobile menu ----
   var btn=document.querySelector('.tn-menu-btn'), menu=document.getElementById('m-menu');
   if(btn&&menu){
