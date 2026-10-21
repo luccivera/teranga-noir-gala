@@ -1,466 +1,883 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teranga Noir Gala · TAIBU Community Health Centre</title>
-  <meta name="description" content="Teranga Noir: TAIBU Community Health Centre celebrates 18 years. Rooted, Standing Firm, Rising. November 29, 2026 at 585 Dundas St E, Toronto.">
-  <meta property="og:title" content="Teranga Noir Gala">
-  <meta property="og:description" content="Celebrate 18 years of TAIBU Community Health Centre. Rooted. Standing firm. Rising.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-image.jpg">
-  <meta name="theme-color" content="#0e0503">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@1,400&display=swap">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teranga Noir Gala · TAIBU Community Health Centre</title>
+    <meta
+      name="description"
+      content="Teranga Noir: TAIBU Community Health Centre celebrates 18 years. Rooted, Standing Firm, Rising. November 29, 2026 at 585 Dundas St E, Toronto."
+    />
+    <meta property="og:title" content="Teranga Noir Gala" />
+    <meta
+      property="og:description"
+      content="Celebrate 18 years of TAIBU Community Health Centre. Rooted. Standing firm. Rising."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-image.jpg" />
+    <meta name="theme-color" content="#0e0503" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@1,400&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <nav class="nav" aria-label="Main">
-      <a class="nav__logo" href="#hero">
-        <img src="assets/taibu-logo.webp" alt="TAIBU Community Health Centre" width="159" height="50">
-      </a>
-      <div class="nav__links">
-        <a class="nav__link" href="#experience">The Evening<span class="nav__bar nav__bar--evening" aria-hidden="true"></span></a>
-        <a class="nav__link" href="#meaning">Our Story<span class="nav__bar nav__bar--story" aria-hidden="true"></span></a>
-        <a class="nav__link" href="#sponsorship">Sponsor<span class="nav__bar nav__bar--sponsor" aria-hidden="true"></span></a>
-        <a class="nav__link" href="#getting-there">Venue<span class="nav__bar nav__bar--venue" aria-hidden="true"></span></a>
-        <a class="btn btn--gold btn--nav" href="#tickets">Purchase Tickets</a>
-      </div>
-      <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="nav__logo" href="#hero">
+          <img
+            src="assets/taibu-logo.webp"
+            alt="TAIBU Community Health Centre"
+            width="159"
+            height="50"
+          />
+        </a>
+        <div class="nav__links">
+          <a class="nav__link" href="#experience"
+            >The Evening<span
+              class="nav__bar nav__bar--evening"
+              aria-hidden="true"
+            ></span
+          ></a>
+          <a class="nav__link" href="#meaning"
+            >Our Story<span
+              class="nav__bar nav__bar--story"
+              aria-hidden="true"
+            ></span
+          ></a>
+          <a class="nav__link" href="#sponsorship"
+            >Sponsor<span
+              class="nav__bar nav__bar--sponsor"
+              aria-hidden="true"
+            ></span
+          ></a>
+          <a class="nav__link" href="#getting-there"
+            >Venue<span
+              class="nav__bar nav__bar--venue"
+              aria-hidden="true"
+            ></span
+          ></a>
+          <a class="btn btn--gold btn--nav" href="#tickets">Purchase Tickets</a>
+        </div>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <span class="scroll-progress" aria-hidden="true"></span>
+    </header>
+
+    <!-- Mobile menu (opened by the button above) -->
+    <nav id="menu" class="menu" aria-label="Menu" hidden>
+      <button type="button" class="menu__close" aria-label="Close menu">
+        ×
       </button>
+      <a href="#experience">The Evening</a>
+      <a href="#meaning">Our Story</a>
+      <a href="#sponsorship">Sponsor</a>
+      <a href="#getting-there">Venue</a>
+      <a class="menu__cta" href="#tickets">Purchase Tickets</a>
     </nav>
-    <span class="scroll-progress" aria-hidden="true"></span>
-  </header>
 
-  <!-- Mobile menu (opened by the button above) -->
-  <nav id="menu" class="menu" aria-label="Menu" hidden>
-    <button type="button" class="menu__close" aria-label="Close menu">×</button>
-    <a href="#experience">The Evening</a>
-    <a href="#meaning">Our Story</a>
-    <a href="#sponsorship">Sponsor</a>
-    <a href="#getting-there">Venue</a>
-    <a class="menu__cta" href="#tickets">Purchase Tickets</a>
-  </nav>
-
-  <!-- ============ HERO ============ -->
-  <section id="hero" class="hero" aria-label="Teranga Noir">
-    <div class="hero__glow intro-glow" aria-hidden="true"></div>
-    <video class="hero-video" data-src="assets/video/hero.mp4" poster="assets/video/hero-poster.jpg" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    <div class="hero-tint" aria-hidden="true"></div>
-    <button type="button" class="video-btn" aria-label="Pause background video" hidden>
-      <span class="video-btn__pause" aria-hidden="true">❚❚</span><span class="video-btn__play" aria-hidden="true">▶</span>
-    </button>
-    <div class="hero__vignette" aria-hidden="true"></div>
-    <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-
-    <div class="hero__inner">
-      <h1 class="hero__title intro-1">
-        <img src="assets/wordmark.webp" alt="Teranga Noir. 18 Years: Rooted, Standing Firm, Rising" width="600" height="493">
-      </h1>
-      <p class="hero__french intro-2" lang="fr">18 ans : Enracinés, inébranlables et en pleine ascension</p>
-      <p class="hero__tagline intro-2">A Celebration of Black Excellence. A Legacy of Community. A Future of Possibility.</p>
-      <p class="hero__meta intro-2">
-        <span data-g="dateFull">November 29, 2026</span>
-        <span class="hero__place">585 Dundas St E</span>
-        <span class="hero__place">Toronto</span>
-      </p>
-      <div class="hero__actions intro-3">
-        <a class="btn btn--gold" href="#tickets">Purchase Tickets</a>
-        <a class="btn btn--ivory" href="#sponsorship">Become a Sponsor</a>
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero" aria-label="Teranga Noir">
+      <div class="hero__glow intro-glow" aria-hidden="true"></div>
+      <video
+        class="hero-video"
+        data-src="assets/video/hero.mp4"
+        poster="assets/video/hero-poster.jpg"
+        muted
+        loop
+        playsinline
+        preload="none"
+        aria-hidden="true"
+        tabindex="-1"
+      ></video>
+      <div class="hero-tint" aria-hidden="true"></div>
+      <button
+        type="button"
+        class="video-btn"
+        aria-label="Pause background video"
+        hidden
+      >
+        <span class="video-btn__pause" aria-hidden="true">❚❚</span
+        ><span class="video-btn__play" aria-hidden="true">▶</span>
+      </button>
+      <div class="hero__vignette" aria-hidden="true"></div>
+      <div class="dust" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+        ><i></i><i></i><i></i><i></i><i></i><i></i>
       </div>
-    </div>
-    <div class="print print--hero" aria-hidden="true"></div>
-  </section>
 
-  <main id="main" class="page">
-
-    <!-- ============ WELCOME ============ -->
-    <section id="welcome" class="section section--welcome">
-      <div class="welcome">
-        <p class="lead lead--lg">Join TAIBU Community Health Centre for Teranga Noir, our inaugural fundraising gala celebrating 18 years of advancing Black health, empowering communities, and creating spaces where Black excellence thrives.</p>
-        <p class="text text--muted">Rooted in the spirit of African hospitality, generosity, and belonging, Teranga Noir is more than an evening of elegance. It is a celebration of the people, stories, and collective strength that have shaped our journey, and an invitation to invest in the generations to come.</p>
+      <div class="hero__inner">
+        <h1 class="hero__title intro-1">
+          <img
+            src="assets/wordmark.webp"
+            alt="Teranga Noir. 18 Years: Rooted, Standing Firm, Rising"
+            width="600"
+            height="493"
+          />
+        </h1>
+        <p class="hero__french intro-2" lang="fr">
+          18 ans : Enracinés, inébranlables et en pleine ascension
+        </p>
+        <p class="hero__tagline intro-2">
+          A Celebration of Black Excellence. A Legacy of Community. A Future of
+          Possibility.
+        </p>
+        <p class="hero__meta intro-2">
+          <span data-g="dateFull">November 29, 2026</span>
+          <span class="hero__place">585 Dundas St E</span>
+          <span class="hero__place">Toronto</span>
+        </p>
+        <div class="hero__actions intro-3">
+          <a class="btn btn--gold" href="#tickets">Purchase Tickets</a>
+          <a class="btn btn--ivory" href="#sponsorship">Become a Sponsor</a>
+        </div>
       </div>
+      <div class="print print--hero" aria-hidden="true"></div>
     </section>
 
-    <!-- ============ THE EXPERIENCE ============ -->
-    <section id="experience" class="section section--experience">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">The Experience</p>
-          <h2 class="title">An Evening Rooted in Culture. Elevated by Purpose.</h2>
-        </header>
-
-        <div class="experience">
-          <div class="stack">
-            <p class="text">Teranga Noir brings together community leaders, changemakers, artists, philanthropists, and visionaries for an unforgettable evening honouring the richness of Black culture, celebrating Black excellence, and embracing the spirit of giving and receiving.</p>
-            <p class="text">Rooted in the belief that generosity is a shared experience, Teranga Noir invites guests to give with purpose and receive an extraordinary evening in return.</p>
-            <p class="text">Through captivating performances, powerful storytelling, vibrant cultural expression, and an elevated dining experience, guests will be immersed in a celebration of Black brilliance, creativity, and achievement. As guests receive an evening filled with culture, connection, and inspiration, their generosity gives back to the community, supporting TAIBU Community Health Centre's continued work to advance Black health, well-being, and collective prosperity.</p>
-          </div>
-          <p class="quote">An evening where giving creates impact, and receiving becomes a celebration of Black excellence.</p>
+    <main id="main" class="page">
+      <!-- ============ WELCOME ============ -->
+      <section id="welcome" class="section section--welcome">
+        <div class="welcome">
+          <p class="lead lead--lg">
+            Join TAIBU Community Health Centre for Teranga Noir, our inaugural
+            fundraising gala celebrating 18 years of advancing Black health,
+            empowering communities, and creating spaces where Black excellence
+            thrives.
+          </p>
+          <p class="text text--muted">
+            Rooted in the spirit of African hospitality, generosity, and
+            belonging, Teranga Noir is more than an evening of elegance. It is a
+            celebration of the people, stories, and collective strength that
+            have shaped our journey, and an invitation to invest in the
+            generations to come.
+          </p>
         </div>
+      </section>
 
-        <!-- Event details -->
-        <div class="details">
-          <div class="details__item">
-            <p class="label">The Date</p>
-            <p class="details__main"><span data-g="dateLong">Sunday, November 29</span></p>
-            <p class="details__sub"><span data-g="year">2026</span></p>
-            <a class="link-underline" href="#" data-ics>Add to calendar</a>
-          </div>
-          <div class="details__item">
-            <p class="label">The Time</p>
-            <p class="details__main">Doors at <span data-g="doorsTime">6:00 PM</span></p>
-            <p class="details__sub">Program begins <span data-g="programTime">7:00 PM</span></p>
-          </div>
-          <div class="details__item">
-            <p class="label">The Venue</p>
-            <p class="details__main">585 Dundas St E</p>
-            <p class="details__sub">Toronto</p>
-            <a class="link-underline" href="#getting-there">Get directions</a>
-          </div>
-          <div class="details__item">
-            <p class="label">The Dress</p>
-            <p class="details__main">Black Tie</p>
-            <p class="details__sub">Red, black and gold. Regal African attire celebrated.</p>
-          </div>
-        </div>
-
-        <p class="pull">One Night. One Community. A Lasting Legacy.</p>
-      </div>
-    </section>
-
-    <!-- ============ TICKETS ============ -->
-    <section id="tickets" class="section section--tickets">
-      <div class="container">
-        <header class="section-head section-head--center">
-          <p class="eyebrow">Be Part of the Celebration</p>
-          <h2 class="title">Your Seat at the Table Makes a Difference.</h2>
-        </header>
-        <p class="intro">Experience an evening where Black culture, community, and philanthropy come together in celebration of a shared legacy.</p>
-
-        <div class="tickets">
-          <article class="card">
-            <h3 class="card__name">Individual Ticket</h3>
-            <p class="card__price"><span data-g="price.single">$250</span></p>
-            <hr class="card__rule">
-            <p class="card__text">Join us for an unforgettable evening of cultural celebration, dining, entertainment, and meaningful connection.</p>
-            <a class="btn btn--outline card__btn" href="#tickets" data-href="links.single" data-fallback="ticketLink">Purchase Ticket</a>
-          </article>
-          <article class="card card--featured">
-            <h3 class="card__name">Table of 10</h3>
-            <p class="card__price"><span data-g="price.table">$2,500</span></p>
-            <hr class="card__rule">
-            <p class="card__text">Bring your colleagues, friends, family, or community together for a shared experience that celebrates excellence while investing in lasting impact.</p>
-            <a class="btn btn--gold card__btn" href="#tickets" data-href="links.table" data-fallback="ticketLink">Purchase Table</a>
-          </article>
-        </div>
-
-        <div class="tickets__footer">
-          <a class="btn btn--gold btn--lg" href="#tickets" data-href="ticketLink">Reserve Your Seat</a>
-          <p class="fineprint">Purchases are completed securely through <span data-g="ticketPlatform">CanadaHelps</span>.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="print print--band" aria-hidden="true"></div>
-
-    <!-- ============ THE MEANING ============ -->
-    <section id="meaning" class="section section--meaning">
-      <div class="container">
-        <header class="section-head section-head--center">
-          <p class="eyebrow">The Meaning Behind Teranga Noir</p>
-          <h2 class="title">A Celebration of Giving and Receiving</h2>
-        </header>
-
-        <div class="meaning">
-          <h3 class="meaning__word foil">Teranga</h3>
-          <p class="meaning__text">In Wolof, Teranga embodies the spirit of hospitality, generosity, and belonging. It is the understanding that true community is built not only through what we give, but through what we receive from one another.</p>
-          <div class="divider" aria-hidden="true"><span class="cowrie"></span></div>
-          <h3 class="meaning__word">Noir</h3>
-          <p class="meaning__text meaning__text--soft">Noir represents the beauty, brilliance, resilience, and sophistication of Black identity.</p>
-        </div>
-
-        <div class="meaning__more">
-          <p class="lead">Together, Teranga Noir is an expression of who we are and what we believe: that when we invest in one another, we all rise.</p>
-          <details class="read-more read-more--center">
-            <summary><span class="read-more__open">Read more</span><span class="read-more__close">Read less</span></summary>
-            <div class="read-more__body">
-              <p class="text">At TAIBU, this philosophy has guided our work for 18 years. Every act of care, every shared resource, and every opportunity created is part of a larger cycle of collective well-being.</p>
-              <p class="text text--light">Teranga Noir invites you to become part of that cycle.</p>
-            </div>
-          </details>
-        </div>
-
-        <p class="pull pull--lg">We Give. We Receive. We Rise Together.</p>
-      </div>
-    </section>
-
-    <!-- ============ OUR STORY ============ -->
-    <section id="story" class="section section--story">
-      <div class="container">
-
-        <div class="photo-strip" role="group" aria-label="Community photos" tabindex="0">
-          <figure class="photo photo--wide"><span class="photo__label" aria-hidden="true">Photo: Community elders</span><img src="assets/photos/elders.jpg" alt="Community elders gathered together at TAIBU" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="photo"><span class="photo__label" aria-hidden="true">Photo: Town hall</span><img src="assets/photos/town-hall.jpg" alt="Community members at a TAIBU town hall" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="photo photo--wide"><span class="photo__label" aria-hidden="true">Photo: Blood drive</span><img src="assets/photos/blood-drive.jpg" alt="Community members at a TAIBU blood drive" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="photo"><span class="photo__label" aria-hidden="true">Photo: Girls program</span><img src="assets/photos/girls-program.jpg" alt="Young girls in a TAIBU youth program" loading="lazy" onerror="this.remove()"></figure>
-        </div>
-        <p class="swipe-hint">Swipe to see more photos</p>
-
-        <!-- 18 Years of Impact -->
-        <div id="impact" class="impact">
-          <img class="tree impact__tree" src="assets/tree.webp" alt="A gold tree with deep roots" width="1000" height="933">
-          <div class="impact__text">
-            <header class="section-head section-head--chapter">
-              <p class="eyebrow">18 Years of Impact</p>
-              <h2 class="title title--chapter">Rooted in Community. Rising Together.</h2>
-            </header>
-            <p class="text">For 18 years, TAIBU Community Health Centre has been a cornerstone of culturally responsive, Africentric health and wellness services for African, Caribbean, and Black communities across the Greater Toronto Area.</p>
-            <details class="read-more">
-              <summary><span class="read-more__open">Read more</span><span class="read-more__close">Read less</span></summary>
-              <div class="read-more__body">
-                <p class="text">Our work is grounded in a simple yet powerful belief: our communities deserve care that honours their identities, understands their experiences, and empowers them to thrive.</p>
-                <p class="text">From mental health and youth empowerment to chronic disease prevention, food security, crisis response, and older adult wellness, TAIBU continues to challenge barriers, build connections, and advance health equity.</p>
-                <p class="lead lead--sm">Our roots run deep. Our foundation is strong. And our vision for the future is greater than ever.</p>
-              </div>
-            </details>
-            <p class="gold-line">18 years of service. Countless lives touched. A legacy still being written.</p>
-          </div>
-        </div>
-
-        <!-- The Power of Your Giving -->
-        <div id="giving" class="giving">
-          <div class="giving__text">
-            <header class="section-head section-head--chapter">
-              <p class="eyebrow">The Power of Your Giving</p>
-              <h2 class="title title--chapter">Give Something. Gain Something Greater.</h2>
-            </header>
-            <p class="lead lead--sm">At the heart of Teranga Noir is the belief that generosity is never one-sided.</p>
-            <details class="read-more">
-              <summary><span class="read-more__open">Read more</span><span class="read-more__close">Read less</span></summary>
-              <div class="read-more__body">
-                <p class="text">When you give, you become part of something greater. You create opportunities for healing, strengthen community connections, and help ensure that culturally responsive care remains accessible to those who need it most.</p>
-                <p class="text">And in return, you receive something equally meaningful: an unforgettable evening of celebration, connection, culture, and the knowledge that your generosity is creating lasting change.</p>
-                <div class="aside">
-                  <p class="text">As we approach Giving Tuesday, Teranga Noir reimagines what it means to give.</p>
-                  <p class="aside__strong">Because the greatest return on generosity is a stronger community.</p>
-                </div>
-              </div>
-            </details>
-          </div>
-          <div class="giving__list">
-            <p class="giving__label">Your participation helps TAIBU continue to:</p>
-            <ul class="bullets">
-              <li>Expand access to culturally responsive health and mental health services.</li>
-              <li>Support Black youth, families, and older adults through community-centred programming.</li>
-              <li>Address food insecurity and the social determinants of health.</li>
-              <li>Advance Black health equity through advocacy, education, and collective action.</li>
-            </ul>
-          </div>
-        </div>
-        <p class="pull pull--lg pull--giving">Your Presence Is a Gift. Your Giving Is an Investment.</p>
-
-      </div>
-    </section>
-
-    <div class="print print--band" aria-hidden="true"></div>
-
-    <!-- ============ SPONSORSHIP ============ -->
-    <section id="sponsorship" class="section section--sponsorship">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Partner with Purpose</p>
-          <h2 class="title">Sponsorship Is More Than Support. It's a Statement.</h2>
-        </header>
-        <p class="lead lead--sponsor">Teranga Noir offers an opportunity for organizations and community partners to stand alongside TAIBU in advancing Black health equity and celebrating Black excellence.</p>
-        <div class="two-col">
-          <p class="text">As a sponsor, you are not simply supporting an event. You are investing in a movement that recognizes the importance of representation, culturally responsive care, and community-led change.</p>
-          <p class="text">Together, we can strengthen the foundations of Black health and well-being while creating meaningful connections between organizations, leaders, and the communities we serve.</p>
-        </div>
-
-        <!-- Top tier -->
-        <article class="tier tier--rising">
-          <div class="tier__head">
-            <h3 class="tier__name">Rising Partner</h3>
-            <p class="tier__price"><span data-g="price.rising">$15,000</span></p>
-            <hr class="tier__rule">
-            <a class="btn btn--gold tier__btn" href="#sponsorship" data-href="links.rising" data-fallback-mail="sponsorshipEmail" data-q="?subject=Teranga%20Noir%20Rising%20Partner">Become a Rising Partner</a>
-          </div>
-          <ul class="bullets bullets--perks tier__perks">
-            <li>Presenting recognition</li>
-            <li>2 Tables</li>
-            <li>VIP reception</li>
-            <li>Speaking opportunity</li>
-            <li>Major logo placement</li>
-            <li>Media recognition</li>
-            <li>Custom activation</li>
-            <li>Year-round recognition</li>
-          </ul>
-        </article>
-
-        <div class="tiers">
-          <article class="tier tier--standing">
-            <h3 class="tier__name">Standing Firm Partner</h3>
-            <p class="tier__price"><span data-g="price.standingFirm">$10,000</span></p>
-            <hr class="tier__rule">
-            <ul class="bullets bullets--perks tier__perks">
-              <li>Table</li>
-              <li>Premium seating</li>
-              <li>Speaking recognition</li>
-              <li>Full-page ad</li>
-              <li>Logo on stage screen</li>
-              <li>Newsletter recognition</li>
-              <li>Social media campaign</li>
-            </ul>
-            <a class="btn btn--outline tier__btn" href="#sponsorship" data-href="links.standingFirm" data-fallback-mail="sponsorshipEmail" data-q="?subject=Teranga%20Noir%20Standing%20Firm%20Partner">Become a Standing Firm Partner</a>
-          </article>
-          <article class="tier tier--rooted">
-            <h3 class="tier__name">Rooted Partner</h3>
-            <p class="tier__price"><span data-g="price.rooted">$5,000</span></p>
-            <hr class="tier__rule">
-            <ul class="bullets bullets--perks tier__perks">
-              <li>Table</li>
-              <li>Half-page ad</li>
-              <li>Website logo</li>
-              <li>Event table signage</li>
-              <li>Social recognition</li>
-            </ul>
-            <a class="btn btn--outline tier__btn" href="#sponsorship" data-href="links.rooted" data-fallback-mail="sponsorshipEmail" data-q="?subject=Teranga%20Noir%20Rooted%20Partner">Become a Rooted Partner</a>
-          </article>
-        </div>
-
-        <p class="gold-line gold-line--center">Align Your Brand With Purpose. Invest in a Legacy of Impact.</p>
-        <div class="actions">
-          <a class="btn btn--gold" href="#sponsorship" data-mail="sponsorshipEmail" data-q="?subject=Teranga%20Noir%20Sponsorship">Become a Sponsor</a>
-          <a class="btn btn--outline" href="assets/sponsorship-package.pdf" data-href="sponsorshipPackage">Explore Sponsorship Opportunities</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GETTING THERE ============ -->
-    <section id="getting-there" class="section section--venue">
-      <div class="container">
-        <div class="venue-head">
-          <header class="section-head section-head--tight">
-            <p class="eyebrow">Getting There</p>
-            <h2 class="title title--venue">Find your way to the court</h2>
+      <!-- ============ THE EXPERIENCE ============ -->
+      <section id="experience" class="section section--experience">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The Experience</p>
+            <h2 class="title">
+              An Evening Rooted in Culture. Elevated by Purpose.
+            </h2>
           </header>
-          <p class="venue-head__intro">Everything you need to arrive at ease, from the door to your seat.</p>
+
+          <div class="experience">
+            <div class="stack">
+              <p class="text">
+                Teranga Noir brings together community leaders, changemakers,
+                artists, philanthropists, and visionaries for an unforgettable
+                evening honouring the richness of Black culture, celebrating
+                Black excellence, and embracing the spirit of giving and
+                receiving.
+              </p>
+              <p class="is-light">
+                This Giving Tuesday, we want you to receive when you give.
+              </p>
+              <p class="text">
+                Rooted in the belief that generosity is a shared experience,
+                Teranga Noir reimagines the spirit of giving by inviting guests
+                to give with purpose and receive an extraordinary experience in
+                return. Through captivating performances, powerful storytelling,
+                vibrant cultural expression, and an elevated dining experience,
+                guests will be immersed in an evening celebrating Black
+                brilliance, creativity, and achievement.
+              </p>
+              <p class="is-light">
+                This Giving Tuesday, your generosity gives back to the
+                community, and in return, you receive an experience worth
+                celebrating.
+              </p>
+              <p class="text">
+                As guests receive an unforgettable evening filled with culture,
+                connection, and inspiration, their generosity extends beyond the
+                celebration, supporting TAIBU Community Health Centre's
+                continued work to advance Black health, well-being, and
+                collective prosperity.
+              </p>
+            </div>
+            <p class="quote">
+              Teranga Noir: Where giving creates impact, and receiving is a
+              celebration of Black excellence.
+            </p>
+          </div>
+
+          <!-- Event details -->
+          <div class="details">
+            <div class="details__item">
+              <p class="label">The Date</p>
+              <p class="details__main">
+                <span data-g="dateLong">Sunday, November 29</span>
+              </p>
+              <p class="details__sub"><span data-g="year">2026</span></p>
+              <a class="link-underline" href="#" data-ics>Add to calendar</a>
+            </div>
+            <div class="details__item">
+              <p class="label">The Time</p>
+              <p class="details__main">
+                Doors at <span data-g="doorsTime">6:00 PM</span>
+              </p>
+              <p class="details__sub">
+                Program begins <span data-g="programTime">7:00 PM</span>
+              </p>
+            </div>
+            <div class="details__item">
+              <p class="label">The Venue</p>
+              <p class="details__main">585 Dundas St E</p>
+              <p class="details__sub">Toronto</p>
+              <a class="link-underline" href="#getting-there">Get directions</a>
+            </div>
+            <div class="details__item">
+              <p class="label">The Dress</p>
+              <p class="details__main">Black Tie</p>
+              <p class="details__sub">
+                Red, black and gold. Regal African attire celebrated.
+              </p>
+            </div>
+          </div>
+
+          <p class="pull">One Night. One Community. A Lasting Legacy.</p>
         </div>
+      </section>
 
-        <div class="venue">
-          <div class="venue__address">
-            <p class="label">The Venue</p>
-            <p class="venue__street">585 Dundas St E</p>
-            <p class="venue__city">Toronto</p>
+      <!-- ============ TICKETS ============ -->
+      <section id="tickets" class="section section--tickets">
+        <div class="container">
+          <header class="section-head section-head--center">
+            <p class="eyebrow">Be Part of the Celebration</p>
+            <h2 class="title">Your Seat at the Table Makes a Difference.</h2>
+          </header>
+          <p class="intro">
+            Experience an evening where Black culture, community, and
+            philanthropy come together in celebration of a shared legacy.
+          </p>
+
+          <div class="tickets">
+            <article class="card">
+              <h3 class="card__name">Individual Ticket</h3>
+              <p class="card__price"><span data-g="price.single">$250</span></p>
+              <hr class="card__rule" />
+              <p class="card__text">
+                Join us for an unforgettable evening of cultural celebration,
+                dining, entertainment, and meaningful connection.
+              </p>
+              <a
+                class="btn btn--outline card__btn"
+                href="#tickets"
+                data-href="links.single"
+                data-fallback="ticketLink"
+                >Purchase Ticket</a
+              >
+            </article>
+            <article class="card card--featured">
+              <h3 class="card__name">Table of 10</h3>
+              <p class="card__price">
+                <span data-g="price.table">$2,500</span>
+              </p>
+              <hr class="card__rule" />
+              <p class="card__text">
+                Bring your colleagues, friends, family, or community together
+                for a shared experience that celebrates excellence while
+                investing in lasting impact.
+              </p>
+              <a
+                class="btn btn--gold card__btn"
+                href="#tickets"
+                data-href="links.table"
+                data-fallback="ticketLink"
+                >Purchase Table</a
+              >
+            </article>
           </div>
-          <dl class="venue__rows">
-            <div class="venue__row">
-              <dt class="label">Transit</dt>
-              <dd>Take the 505 Dundas streetcar to Regent Park Blvd. The stop is right in front of the building. From Dundas Station ride east; from Broadview Station ride west. Or take the 65 Parliament bus from Castle Frank Station to Dundas, then walk 5 minutes east.</dd>
-            </div>
-            <div class="venue__row">
-              <dt class="label">Driving</dt>
-              <dd>From the Gardiner, exit at Jarvis Street and head north to Dundas Street East, then turn right. From the Don Valley Parkway, exit at Richmond Street and take Parliament Street north to Dundas, then turn right.</dd>
-            </div>
-            <div class="venue__row">
-              <dt class="label">Parking</dt>
-              <dd>Paid parking underneath the building, entrance at 255 Sackville Street. Evening and weekend flat rate of $7. Street parking nearby.</dd>
-            </div>
-            <div class="venue__row">
-              <dt class="label">Access</dt>
-              <dd>Step-free entrance from street level, elevators to every floor and accessible parking on site. Tell us what you need when you reserve.</dd>
-            </div>
-          </dl>
-          <div class="venue__actions">
-            <a class="btn btn--gold" href="https://maps.google.com/?q=Daniels+Spectrum,+585+Dundas+St+E,+Toronto" target="_blank" rel="noopener">Get Directions</a>
-            <a class="btn btn--outline" href="#" data-ics>Add to Calendar</a>
+
+          <div class="tickets__footer">
+            <a
+              class="btn btn--gold btn--lg"
+              href="#tickets"
+              data-href="ticketLink"
+              >Reserve Your Seat</a
+            >
+            <p class="fineprint">
+              Purchases are completed securely through
+              <span data-g="ticketPlatform">CanadaHelps</span>.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <div class="print print--footer" aria-hidden="true"></div>
-    <div class="site-footer__inner">
-      <div class="container">
+      <div class="print print--band" aria-hidden="true"></div>
 
-        <!-- The Future We Build Together -->
-        <div id="future" class="future">
-          <figure class="photo photo--staff"><span class="photo__label" aria-hidden="true">Photo: TAIBU staff</span><img src="assets/photos/staff.jpg" alt="TAIBU staff group photo" loading="lazy" onerror="this.remove()"></figure>
-          <div class="section-head section-head--center section-head--flush">
-            <p class="eyebrow">The Future We Build Together</p>
-            <h2 class="title">The Next Chapter Begins With Us.</h2>
+      <!-- ============ THE MEANING ============ -->
+      <section id="meaning" class="section section--meaning">
+        <div class="container">
+          <header class="section-head section-head--center">
+            <p class="eyebrow">The Meaning Behind Teranga Noir</p>
+            <h2 class="title">A Celebration of Giving and Receiving</h2>
+          </header>
+
+          <div class="meaning">
+            <h3 class="meaning__word foil">Teranga</h3>
+            <p class="meaning__text">
+              In Wolof, Teranga embodies the spirit of hospitality, generosity,
+              and belonging. It is the understanding that true community is
+              built not only through what we give, but through what we receive
+              from one another.
+            </p>
+            <div class="divider" aria-hidden="true">
+              <span class="cowrie"></span>
+            </div>
+            <h3 class="meaning__word">Noir</h3>
+            <p class="meaning__text meaning__text--soft">
+              Noir represents the beauty, brilliance, resilience, and
+              sophistication of Black identity.
+            </p>
           </div>
-          <div class="future__text">
-            <p>Eighteen years ago, TAIBU began with a vision: a future where Black communities could access care rooted in their cultures, experiences, and aspirations.</p>
-            <p class="is-light">Today, that vision continues to grow.</p>
-            <p>Teranga Noir is both a celebration of how far we have come and a commitment to how far we can go.</p>
-            <p>As we honour our past, celebrate our present, and imagine our future, we invite you to stand with us.</p>
-            <p class="is-light">Because when our communities are rooted in care, strengthened by unity, and empowered through generosity, there is no limit to how high we can rise.</p>
+
+          <div class="meaning__more">
+            <p class="lead">
+              Together, Teranga Noir is an expression of who we are and what we
+              believe: that when we invest in one another, we all rise.
+            </p>
+            <details class="read-more read-more--center">
+              <summary>
+                <span class="read-more__open">Read more</span
+                ><span class="read-more__close">Read less</span>
+              </summary>
+              <div class="read-more__body">
+                <p class="text">
+                  At TAIBU, this philosophy has guided our work for 18 years.
+                  Every act of care, every shared resource, and every
+                  opportunity created is part of a larger cycle of collective
+                  well-being.
+                </p>
+                <p class="text text--light">
+                  Teranga Noir invites you to become part of that cycle.
+                </p>
+              </div>
+            </details>
           </div>
-          <div class="signoff">
-            <p class="signoff__title foil">Teranga Noir 2026</p>
-            <p class="signoff__motto">Rooted. Standing Firm. Rising.</p>
-            <p class="signoff__date"><span data-g="dateFull">November 29, 2026</span></p>
+
+          <p class="pull pull--lg">We Give. We Receive. We Rise Together.</p>
+        </div>
+      </section>
+
+      <!-- ============ OUR STORY ============ -->
+      <section id="story" class="section section--story">
+        <div class="container">
+          <div
+            class="photo-strip"
+            role="group"
+            aria-label="Community photos"
+            tabindex="0"
+          >
+            <figure class="photo photo--wide">
+              <span class="photo__label" aria-hidden="true"
+                >Photo: Community elders</span
+              ><img
+                src="assets/photos/elders.jpg"
+                alt="Community elders gathered together at TAIBU"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </figure>
+            <figure class="photo">
+              <span class="photo__label" aria-hidden="true"
+                >Photo: Town hall</span
+              ><img
+                src="assets/photos/town-hall.jpg"
+                alt="Community members at a TAIBU town hall"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </figure>
+            <figure class="photo photo--wide">
+              <span class="photo__label" aria-hidden="true"
+                >Photo: Blood drive</span
+              ><img
+                src="assets/photos/blood-drive.jpg"
+                alt="Community members at a TAIBU blood drive"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </figure>
+            <figure class="photo">
+              <span class="photo__label" aria-hidden="true"
+                >Photo: Girls program</span
+              ><img
+                src="assets/photos/girls-program.jpg"
+                alt="Young girls in a TAIBU youth program"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </figure>
           </div>
+          <p class="swipe-hint">Swipe to see more photos</p>
+
+          <!-- 18 Years of Impact -->
+          <div id="impact" class="impact">
+            <img
+              class="tree impact__tree"
+              src="assets/tree.webp"
+              alt="A gold tree with deep roots"
+              width="1000"
+              height="933"
+            />
+            <div class="impact__text">
+              <header class="section-head section-head--chapter">
+                <p class="eyebrow">18 Years of Impact</p>
+                <h2 class="title title--chapter">
+                  Rooted in Community. Rising Together.
+                </h2>
+              </header>
+              <p class="text">
+                For 18 years, TAIBU Community Health Centre has been a
+                cornerstone of culturally responsive, Africentric health and
+                wellness services for African, Caribbean, and Black communities
+                across the Greater Toronto Area.
+              </p>
+              <details class="read-more">
+                <summary>
+                  <span class="read-more__open">Read more</span
+                  ><span class="read-more__close">Read less</span>
+                </summary>
+                <div class="read-more__body">
+                  <p class="text">
+                    Our work is grounded in a simple yet powerful belief: our
+                    communities deserve care that honours their identities,
+                    understands their experiences, and empowers them to thrive.
+                  </p>
+                  <p class="text">
+                    From mental health and youth empowerment to chronic disease
+                    prevention, food security, crisis response, and older adult
+                    wellness, TAIBU continues to challenge barriers, build
+                    connections, and advance health equity.
+                  </p>
+                  <p class="lead lead--sm">
+                    Our roots run deep. Our foundation is strong. And our vision
+                    for the future is greater than ever.
+                  </p>
+                </div>
+              </details>
+              <p class="gold-line">
+                18 years of service. Countless lives touched. A legacy still
+                being written.
+              </p>
+            </div>
+          </div>
+
+          <!-- The Power of Your Giving -->
+          <div id="giving" class="giving">
+            <div class="giving__text">
+              <header class="section-head section-head--chapter">
+                <p class="eyebrow">The Power of Your Giving</p>
+                <h2 class="title title--chapter">
+                  Give Something. Gain Something Greater.
+                </h2>
+              </header>
+              <p class="lead lead--sm">
+                At the heart of Teranga Noir is the belief that generosity is
+                never one-sided.
+              </p>
+              <details class="read-more">
+                <summary>
+                  <span class="read-more__open">Read more</span
+                  ><span class="read-more__close">Read less</span>
+                </summary>
+                <div class="read-more__body">
+                  <p class="text">
+                    When you give, you become part of something greater. You
+                    create opportunities for healing, strengthen community
+                    connections, and help ensure that culturally responsive care
+                    remains accessible to those who need it most.
+                  </p>
+                  <p class="text">
+                    And in return, you receive something equally meaningful: an
+                    unforgettable evening of celebration, connection, culture,
+                    and the knowledge that your generosity is creating lasting
+                    change.
+                  </p>
+                  <div class="aside">
+                    <p class="text">
+                      As we approach Giving Tuesday, Teranga Noir reimagines
+                      what it means to give.
+                    </p>
+                    <p class="aside__strong">
+                      Because the greatest return on generosity is a stronger
+                      community.
+                    </p>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="giving__list">
+              <p class="giving__label">
+                Your participation helps TAIBU continue to:
+              </p>
+              <ul class="bullets">
+                <li>
+                  Expand access to culturally responsive health and mental
+                  health services.
+                </li>
+                <li>
+                  Support Black youth, families, and older adults through
+                  community-centred programming.
+                </li>
+                <li>
+                  Address food insecurity and the social determinants of health.
+                </li>
+                <li>
+                  Advance Black health equity through advocacy, education, and
+                  collective action.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="pull pull--lg pull--giving">
+            Your Presence Is a Gift. Your Giving Is an Investment.
+          </p>
+        </div>
+      </section>
+
+      <div class="print print--band" aria-hidden="true"></div>
+
+      <!-- ============ SPONSORSHIP ============ -->
+      <section id="sponsorship" class="section section--sponsorship">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Partner with Purpose</p>
+            <h2 class="title">
+              Sponsorship Is More Than Support. It's a Statement.
+            </h2>
+          </header>
+          <p class="lead lead--sponsor">
+            Teranga Noir offers an opportunity for organizations and community
+            partners to stand alongside TAIBU in advancing Black health equity
+            and celebrating Black excellence.
+          </p>
+          <div class="two-col">
+            <p class="text">
+              As a sponsor, you are not simply supporting an event. You are
+              investing in a movement that recognizes the importance of
+              representation, culturally responsive care, and community-led
+              change.
+            </p>
+            <p class="text">
+              Together, we can strengthen the foundations of Black health and
+              well-being while creating meaningful connections between
+              organizations, leaders, and the communities we serve.
+            </p>
+          </div>
+
+          <!-- Top tier -->
+          <article class="tier tier--rising">
+            <div class="tier__head">
+              <h3 class="tier__name">Rising Partner</h3>
+              <p class="tier__price">
+                <span data-g="price.rising">$15,000</span>
+              </p>
+              <hr class="tier__rule" />
+              <a
+                class="btn btn--gold tier__btn"
+                href="#sponsorship"
+                data-href="links.rising"
+                data-fallback-mail="sponsorshipEmail"
+                data-q="?subject=Teranga%20Noir%20Rising%20Partner"
+                >Become a Rising Partner</a
+              >
+            </div>
+            <ul class="bullets bullets--perks tier__perks">
+              <li>Presenting recognition</li>
+              <li>2 Tables</li>
+              <li>VIP reception</li>
+              <li>Speaking opportunity</li>
+              <li>Major logo placement</li>
+              <li>Media recognition</li>
+              <li>Custom activation</li>
+              <li>Year-round recognition</li>
+            </ul>
+          </article>
+
+          <div class="tiers">
+            <article class="tier tier--standing">
+              <h3 class="tier__name">Standing Firm Partner</h3>
+              <p class="tier__price">
+                <span data-g="price.standingFirm">$10,000</span>
+              </p>
+              <hr class="tier__rule" />
+              <ul class="bullets bullets--perks tier__perks">
+                <li>Table</li>
+                <li>Premium seating</li>
+                <li>Speaking recognition</li>
+                <li>Full-page ad</li>
+                <li>Logo on stage screen</li>
+                <li>Newsletter recognition</li>
+                <li>Social media campaign</li>
+              </ul>
+              <a
+                class="btn btn--outline tier__btn"
+                href="#sponsorship"
+                data-href="links.standingFirm"
+                data-fallback-mail="sponsorshipEmail"
+                data-q="?subject=Teranga%20Noir%20Standing%20Firm%20Partner"
+                >Become a Standing Firm Partner</a
+              >
+            </article>
+            <article class="tier tier--rooted">
+              <h3 class="tier__name">Rooted Partner</h3>
+              <p class="tier__price">
+                <span data-g="price.rooted">$5,000</span>
+              </p>
+              <hr class="tier__rule" />
+              <ul class="bullets bullets--perks tier__perks">
+                <li>Table</li>
+                <li>Half-page ad</li>
+                <li>Website logo</li>
+                <li>Event table signage</li>
+                <li>Social recognition</li>
+              </ul>
+              <a
+                class="btn btn--outline tier__btn"
+                href="#sponsorship"
+                data-href="links.rooted"
+                data-fallback-mail="sponsorshipEmail"
+                data-q="?subject=Teranga%20Noir%20Rooted%20Partner"
+                >Become a Rooted Partner</a
+              >
+            </article>
+          </div>
+
+          <p class="gold-line gold-line--center">
+            Align Your Brand With Purpose. Invest in a Legacy of Impact.
+          </p>
           <div class="actions">
-            <a class="btn btn--gold" href="#tickets">Get Your Tickets</a>
-            <a class="btn btn--outline" href="#sponsorship">Support the Vision</a>
+            <a
+              class="btn btn--gold"
+              href="#sponsorship"
+              data-mail="sponsorshipEmail"
+              data-q="?subject=Teranga%20Noir%20Sponsorship"
+              >Become a Sponsor</a
+            >
+            <a
+              class="btn btn--outline"
+              href="assets/sponsorship-package.pdf"
+              data-href="sponsorshipPackage"
+              >Explore Sponsorship Opportunities</a
+            >
           </div>
         </div>
+      </section>
 
-        <!-- Directory -->
-        <div class="directory">
-          <div class="directory__brand">
-            <img src="assets/taibu-logo.webp" alt="TAIBU Community Health Centre" width="242" height="76">
-            <p>Rooted. Standing Firm. Rising.<br>18 ans : Enracinés, inébranlables et en pleine ascension</p>
-            <p class="directory__date"><span data-g="dateShort">Sun, Nov 29</span> · 585 Dundas St E</p>
+      <!-- ============ GETTING THERE ============ -->
+      <section id="getting-there" class="section section--venue">
+        <div class="container">
+          <div class="venue-head">
+            <header class="section-head section-head--tight">
+              <p class="eyebrow">Getting There</p>
+              <h2 class="title title--venue">Find your way to the court</h2>
+            </header>
+            <p class="venue-head__intro">
+              Everything you need to arrive at ease, from the door to your seat.
+            </p>
           </div>
-          <div class="directory__col">
-            <p class="directory__heading">The Gala</p>
-            <a href="#experience">The Evening</a>
-            <a href="#meaning">Our Story</a>
-            <a href="#tickets">Tickets</a>
-            <a href="#sponsorship">Sponsor</a>
-            <a href="#getting-there">Venue</a>
-          </div>
-          <div class="directory__col">
-            <p class="directory__heading">Contact</p>
-            <span class="directory__label">Gala and tickets</span>
-            <a href="mailto:" data-mail="galaEmail" data-q=""><span data-g="galaEmail">[gala@email]</span></a>
-            <span class="directory__label">Sponsorship</span>
-            <a href="mailto:" data-mail="sponsorshipEmail" data-q=""><span data-g="sponsorshipEmail">[sponsorship@email]</span></a>
-            <span class="directory__label">Phone</span>
-            <a href="tel:" data-tel="phone"><span data-g="phone">416-644-3536</span></a>
-          </div>
-          <div class="directory__col">
-            <p class="directory__heading">TAIBU CHC</p>
-            <p><span data-g="taibuAddress">1-27 Tapscott Road<br>Scarborough, ON M1B 4Y7</span></p>
-            <a href="#" data-href="instagram">Instagram</a>
-            <a href="#" data-href="taibuWebsite">taibuchc.ca</a>
+
+          <div class="venue">
+            <div class="venue__address">
+              <p class="label">The Venue</p>
+              <p class="venue__street">585 Dundas St E</p>
+              <p class="venue__city">Toronto</p>
+            </div>
+            <dl class="venue__rows">
+              <div class="venue__row">
+                <dt class="label">Transit</dt>
+                <dd>
+                  Take the 505 Dundas streetcar to Regent Park Blvd. The stop is
+                  right in front of the building. From Dundas Station ride east;
+                  from Broadview Station ride west. Or take the 65 Parliament
+                  bus from Castle Frank Station to Dundas, then walk 5 minutes
+                  east.
+                </dd>
+              </div>
+              <div class="venue__row">
+                <dt class="label">Driving</dt>
+                <dd>
+                  From the Gardiner, exit at Jarvis Street and head north to
+                  Dundas Street East, then turn right. From the Don Valley
+                  Parkway, exit at Richmond Street and take Parliament Street
+                  north to Dundas, then turn right.
+                </dd>
+              </div>
+              <div class="venue__row">
+                <dt class="label">Parking</dt>
+                <dd>
+                  Paid parking underneath the building, entrance at 255
+                  Sackville Street. Evening and weekend flat rate of $7. Street
+                  parking nearby.
+                </dd>
+              </div>
+              <div class="venue__row">
+                <dt class="label">Access</dt>
+                <dd>
+                  Step-free entrance from street level, elevators to every floor
+                  and accessible parking on site. Tell us what you need when you
+                  reserve.
+                </dd>
+              </div>
+            </dl>
+            <div class="venue__actions">
+              <a
+                class="btn btn--gold"
+                href="https://maps.google.com/?q=Daniels+Spectrum,+585+Dundas+St+E,+Toronto"
+                target="_blank"
+                rel="noopener"
+                >Get Directions</a
+              >
+              <a class="btn btn--outline" href="#" data-ics>Add to Calendar</a>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="legal">
-          <p>© <span data-g="year">2026</span> TAIBU Community Health Centre. Charitable Registration No. <span data-g="charityNumber">80696 0357 RR0001</span></p>
-          <a class="legal__top" href="#hero">Back to top ↑</a>
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="print print--footer" aria-hidden="true"></div>
+      <div class="site-footer__inner">
+        <div class="container">
+          <!-- The Future We Build Together -->
+          <div id="future" class="future">
+            <figure class="photo photo--staff">
+              <span class="photo__label" aria-hidden="true"
+                >Photo: TAIBU staff</span
+              ><img
+                src="assets/photos/staff.jpg"
+                alt="TAIBU staff group photo"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </figure>
+            <div class="section-head section-head--center section-head--flush">
+              <p class="eyebrow">The Future We Build Together</p>
+              <h2 class="title">The Next Chapter Begins With Us.</h2>
+            </div>
+            <div class="future__text">
+              <p>
+                Eighteen years ago, TAIBU began with a vision: a future where
+                Black communities could access care rooted in their cultures,
+                experiences, and aspirations.
+              </p>
+              <p class="is-light">Today, that vision continues to grow.</p>
+              <p>
+                Teranga Noir is both a celebration of how far we have come and a
+                commitment to how far we can go.
+              </p>
+              <p>
+                As we honour our past, celebrate our present, and imagine our
+                future, we invite you to stand with us.
+              </p>
+              <p class="is-light">
+                Because when our communities are rooted in care, strengthened by
+                unity, and empowered through generosity, there is no limit to
+                how high we can rise.
+              </p>
+            </div>
+            <div class="signoff">
+              <p class="signoff__title foil">Teranga Noir 2026</p>
+              <p class="signoff__motto">Rooted. Standing Firm. Rising.</p>
+              <p class="signoff__date">
+                <span data-g="dateFull">November 29, 2026</span>
+              </p>
+            </div>
+            <div class="actions">
+              <a class="btn btn--gold" href="#tickets">Get Your Tickets</a>
+              <a class="btn btn--outline" href="#sponsorship"
+                >Support the Vision</a
+              >
+            </div>
+          </div>
+
+          <!-- Directory -->
+          <div class="directory">
+            <div class="directory__brand">
+              <img
+                src="assets/taibu-logo.webp"
+                alt="TAIBU Community Health Centre"
+                width="242"
+                height="76"
+              />
+              <p>
+                Rooted. Standing Firm. Rising.<br />18 ans : Enracinés,
+                inébranlables et en pleine ascension
+              </p>
+              <p class="directory__date">
+                <span data-g="dateShort">Sun, Nov 29</span> · 585 Dundas St E
+              </p>
+            </div>
+            <div class="directory__col">
+              <p class="directory__heading">The Gala</p>
+              <a href="#experience">The Evening</a>
+              <a href="#meaning">Our Story</a>
+              <a href="#tickets">Tickets</a>
+              <a href="#sponsorship">Sponsor</a>
+              <a href="#getting-there">Venue</a>
+            </div>
+            <div class="directory__col">
+              <p class="directory__heading">Contact</p>
+              <span class="directory__label">Gala and tickets</span>
+              <a href="mailto:" data-mail="galaEmail" data-q=""
+                ><span data-g="galaEmail">[gala@email]</span></a
+              >
+              <span class="directory__label">Sponsorship</span>
+              <a href="mailto:" data-mail="sponsorshipEmail" data-q=""
+                ><span data-g="sponsorshipEmail">[sponsorship@email]</span></a
+              >
+              <span class="directory__label">Phone</span>
+              <a href="tel:" data-tel="phone"
+                ><span data-g="phone">416-644-3536</span></a
+              >
+            </div>
+            <div class="directory__col">
+              <p class="directory__heading">TAIBU CHC</p>
+              <p>
+                <span data-g="taibuAddress"
+                  >1-27 Tapscott Road<br />Scarborough, ON M1B 4Y7</span
+                >
+              </p>
+              <a href="#" data-href="instagram">Instagram</a>
+              <a href="#" data-href="taibuWebsite">taibuchc.ca</a>
+            </div>
+          </div>
+
+          <div class="legal">
+            <p>
+              © <span data-g="year">2026</span> TAIBU Community Health Centre.
+              Charitable Registration No.
+              <span data-g="charityNumber">80696 0357 RR0001</span>
+            </p>
+            <a class="legal__top" href="#hero">Back to top ↑</a>
+          </div>
         </div>
-
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="content.js"></script>
-  <script src="main.js" defer></script>
-</body>
+    <script src="content.js"></script>
+    <script src="main.js" defer></script>
+  </body>
 </html>

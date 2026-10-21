@@ -13,8 +13,8 @@ window.GALA = {
   ends: "23:59", // used for the "Add to calendar" file, e.g. "23:30"
 
   /* ---- Tickets ---- */
-  ticketLink: "", // paste your CanadaHelps event link
-  ticketPlatform: "CanadaHelps", // shown under the ticket cards
+  ticketLink: "https://www.zeffy.com/en-CA/ticketing/teranga-noir-gala", // paste your CanadaHelps event link
+  ticketPlatform: "Zeffy", // shown under the ticket cards
   purchaseNote: "", // optional line after it, e.g. "Tax receipts are issued for the eligible portion."
   price: {
     single: "$250",
@@ -37,15 +37,15 @@ window.GALA = {
   courses: "three", // "A three-course dinner…"
 
   /* ---- Contact ---- */
-  galaEmail: "",
-  sponsorshipEmail: "",
+  galaEmail: "donations@taibuchc.ca",
+  sponsorshipEmail: "donations@taibuchc.ca",
   phone: "416-644-3536",
 
   /* ---- Links ---- */
   sponsorshipPackage: "assets/sponsorship-package.pdf", // drop the PDF in the assets folder
   instagram: "https://instagram.com/taibuchc", // full link, e.g. "https://instagram.com/taibuchc"
   facebook: "", // not used
-  taibuWebsite: "https://taibuchc.ca",
+  taibuWebsite: "https://www.taibuchc.ca",
 
   /* ---- TAIBU details (footer) ---- */
   taibuAddress: "1-27 Tapscott Road\nScarborough, ON M1B 4Y7", // use \n for a new line, e.g. "Street\nScarborough, ON A1A 1A1"
