@@ -1,6 +1,7 @@
 // Teranga Noir: fills the page from content.js, runs the hero video and the mobile menu.
 (function () {
   var C = window.GALA || {};
+  var FR = document.documentElement.lang === 'fr';   // the French page is fr/index.html
   var get = function (path) {
     return path.split('.').reduce(function (obj, key) { return obj == null ? undefined : obj[key]; }, C);
   };
@@ -9,6 +10,7 @@
   var formatTime = function (hm) {
     if (!hm) return '';
     var parts = hm.split(':').map(Number);
+    if (FR) return parts[0] + ' h' + (parts[1] ? ' ' + String(parts[1]).padStart(2, '0') : '');   // 18 h, 18 h 30
     return new Date(2000, 0, 1, parts[0], parts[1]).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
   };
   C.doorsTime = formatTime(C.doors);
@@ -17,11 +19,23 @@
   if (C.date) {
     var p = C.date.split('-').map(Number);
     var day = new Date(p[0], p[1] - 1, p[2]);
-    var fmt = function (opts) { return day.toLocaleDateString('en-CA', opts); };
-    C.dateLong = fmt({ weekday: 'long', month: 'long', day: 'numeric' });
-    C.dateShort = fmt({ weekday: 'short', month: 'short', day: 'numeric' });
+    var fmt = function (opts) { return day.toLocaleDateString(FR ? 'fr-CA' : 'en-CA', opts); };
+    var cap = function (t) { return t.charAt(0).toUpperCase() + t.slice(1); };
+    C.dateLong = cap(fmt({ weekday: 'long', month: 'long', day: 'numeric' }));     // Dimanche 29 novembre
+    C.dateShort = cap(fmt({ weekday: 'short', month: 'short', day: 'numeric' }));
     C.dateFull = fmt({ month: 'long', day: 'numeric', year: 'numeric' });
     C.year = String(p[0]);
+  }
+
+  // ---------- French page: prices as "2 500 $", French Zeffy page ----------
+  if (FR) {
+    Object.keys(C.price || {}).forEach(function (k) {
+      var n = Number(String(C.price[k]).replace(/[^\d.]/g, ''));
+      if (n) C.price[k] = n.toLocaleString('fr-CA') + ' $';
+    });
+    var toFr = function (url) { return typeof url === 'string' ? url.replace('zeffy.com/en-CA/', 'zeffy.com/fr-CA/') : url; };
+    C.ticketLink = toFr(C.ticketLink);
+    Object.keys(C.links || {}).forEach(function (k) { C.links[k] = toFr(C.links[k]); });
   }
 
   // ---------- Text: <span data-g="key"> ----------
@@ -72,7 +86,7 @@
       'DTEND;TZID=America/Toronto:' + stamp(C.ends),
       'SUMMARY:Teranga Noir',
       'LOCATION:' + [C.venueName, C.venueAddress].filter(Boolean).join(', ').replace(/,/g, '\\,'),
-      'DESCRIPTION:Celebrating 18 years of TAIBU Community Health Centre.',
+      'DESCRIPTION:' + (FR ? 'Célébration des 18 ans du Centre de santé communautaire TAIBU.' : 'Celebrating 18 years of TAIBU Community Health Centre.'),
       'END:VEVENT', 'END:VCALENDAR'
     ].join('\r\n');
     var icsUrl = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
@@ -91,7 +105,9 @@
       hero.classList.add('has-video');
       btn.hidden = false;
       btn.classList.toggle('is-paused', paused);
-      btn.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
+      btn.setAttribute('aria-label', FR
+        ? (paused ? 'Lire la vidéo' : 'Mettre la vidéo en pause')
+        : (paused ? 'Play background video' : 'Pause background video'));
     };
     video.addEventListener('playing', function () { showVideo(false); });
     video.addEventListener('loadeddata', function () { if (reduceMotion) showVideo(true); });

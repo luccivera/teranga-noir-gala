@@ -4,9 +4,12 @@ index.html   The words and structure of the page. One copy that works on every s
 styles.css   All the styling: colours (top of the file), fonts, layout, animations.
              Sections are labelled with comments. Phone styles are near the bottom,
              under "@media (max-width: 899px)"; tablet styles just above them.
+fr/index.html  The French page (teranganoir.com/fr/). Same layout and classes as index.html.
+             A layout change must be made in BOTH index.html and fr/index.html.
+             Wording changes only go in the page for that language.
 main.js      Fills in content.js, runs the hero video, the menu and "Add to calendar".
 assets/      favicon.svg, og-image.jpg (link preview), print-wide.svg and print-band.svg
-             (the African print bands). Add hero.mp4, hero-poster.jpg and photos here.
+             (the African print bands), wordmark-fr.webp (French logo). Add hero.mp4, hero-poster.jpg and photos here.
 
 HOW TO UPDATE THE DETAILS (date, prices, links, emails…)
   1. Open content.js in any text editor (TextEdit, Notepad, VS Code).
@@ -37,3 +40,8 @@ Put these in assets/video/ (create the folder):
 The video only loads when the file is there; otherwise the red glow shows as before.
 A pause button appears over the video (needed for accessibility). Visitors with "reduce motion" on see the still frame.
 
+
+FRENCH PAGE
+  The EN | FR links in the nav switch between index.html and fr/index.html.
+  content.js is shared: dates, times and prices switch to French style automatically
+  (29 novembre 2026, 18 h, 2 500 $), and Zeffy links open Zeffy's French page.

@@ -24,6 +24,9 @@
       href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@1,400&display=swap"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="alternate" hreflang="en" href="https://teranganoir.com/" />
+    <link rel="alternate" hreflang="fr" href="https://teranganoir.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://teranganoir.com/" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -64,6 +67,11 @@
               aria-hidden="true"
             ></span
           ></a>
+          <div class="lang lang--desktop">
+            <a class="lang__opt" href="./" lang="en" hreflang="en" aria-label="English" aria-current="true">EN</a>
+            <span class="lang__sep" aria-hidden="true">|</span>
+            <a class="lang__opt" href="fr/" lang="fr" hreflang="fr" aria-label="Français">FR</a>
+          </div>
           <a
             class="btn btn--gold btn--nav"
             href="https://www.zeffy.com/en-CA/ticketing/teranga-noir-gala"
@@ -71,6 +79,11 @@
             rel="noopener noreferrer"
             >Purchase Tickets</a
           >
+        </div>
+        <div class="lang lang--mobile">
+          <a class="lang__opt" href="./" lang="en" hreflang="en" aria-label="English" aria-current="true">EN</a>
+          <span class="lang__sep" aria-hidden="true">|</span>
+          <a class="lang__opt" href="fr/" lang="fr" hreflang="fr" aria-label="Français">FR</a>
         </div>
         <button
           type="button"
@@ -94,6 +107,11 @@
       <a href="#meaning">Our Story</a>
       <a href="#sponsorship">Sponsor</a>
       <a href="#getting-there">Venue</a>
+      <div class="lang lang--menu">
+        <a class="lang__opt" href="./" lang="en" hreflang="en" aria-label="English" aria-current="true">EN</a>
+        <span class="lang__sep" aria-hidden="true">|</span>
+        <a class="lang__opt" href="fr/" lang="fr" hreflang="fr" aria-label="Français">FR</a>
+      </div>
       <a class="menu__cta" href="#tickets">Purchase Tickets</a>
     </nav>
 
@@ -145,8 +163,7 @@
         </p>
         <p class="hero__meta intro-2">
           <span data-g="dateFull">November 29, 2026</span>
-          <span class="hero__place">585 Dundas St E</span>
-          <span class="hero__place">Toronto</span>
+          <span class="hero__place">585 Dundas St E</span><span class="hero__place">Toronto</span>
         </p>
         <div class="hero__actions intro-3">
           <a class="btn btn--gold" href="#tickets">Purchase Tickets</a>

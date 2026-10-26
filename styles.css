@@ -189,6 +189,21 @@ section[id] { scroll-margin-top: 0; }
   border: 1px solid rgba(233, 181, 44, 0.5); background: transparent; color: var(--gold-text); font-size: 26px;
 }
 
+/* Language switch: EN | FR (the current language shows in gold) */
+.lang { display: flex; align-items: center; gap: 6px; }
+.lang__opt {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 44px;
+  font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.16em; color: var(--muted);
+}
+.lang__opt:hover { color: var(--gold-light); }
+.lang__opt[aria-current="true"] { color: var(--gold-text); }
+.lang__sep { font-size: 13px; color: rgba(233, 181, 44, 0.45); }
+.lang--desktop { padding-left: 20px; border-left: 1px solid var(--gold-line-soft); }
+.lang--mobile { display: none; }
+.lang--menu { gap: 10px; margin-top: 8px; }
+.menu .lang__opt { font-family: var(--sans); font-size: 15px; color: var(--muted); }
+.menu .lang__opt[aria-current="true"] { color: var(--gold-text); }
+
 /* ---------- African print bands ---------- */
 .print { background-color: var(--oxblood); background-repeat: repeat; }
 .print--hero, .print--footer { height: 40px; background-image: url("assets/print-wide.svg"); border-top: 1px solid var(--gold); }
@@ -542,7 +557,9 @@ section[id] { scroll-margin-top: 0; }
    ========================================================================== */
 @media (min-width: 900px) and (max-width: 1279px) {
   :root { --gutter: 48px; }
-  .nav__links { gap: 18px; }
+  .nav__links { flex-wrap: nowrap; gap: 14px; letter-spacing: 0.1em; white-space: nowrap; }
+  .lang--desktop { padding-left: 14px; }
+  .btn--nav { padding: 0 14px; letter-spacing: 0.1em; }
 }
 
 /* ==========================================================================
@@ -577,6 +594,7 @@ section[id] { scroll-margin-top: 0; }
   }
   .menu-btn span { width: 18px; height: 1px; background: var(--gold-text); }
   .menu-btn span:last-child { width: 12px; }
+  .lang--mobile { display: flex; margin-left: auto; margin-right: 8px; }
 
   /* Hero */
   .hero { min-height: 860px; }
