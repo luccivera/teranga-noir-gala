@@ -93,6 +93,27 @@
     document.querySelectorAll('[data-ics]').forEach(function (a) { a.href = icsUrl; a.download = 'teranga-noir-gala.ics'; });
   }
 
+  // ---------- Director's welcome video (YouTube, loads only when played) ----------
+  var poster = document.querySelector('.director__poster');
+  var ytId = (String(C.directorVideo || '').match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/) || [])[1];
+  if (poster && !ytId) {
+    poster.closest('.director').hidden = true;   // no video link in content.js yet
+  } else if (poster) {
+    var thumb = poster.querySelector('img');
+    thumb.onerror = function () { thumb.onerror = null; thumb.src = 'https://i.ytimg.com/vi/' + ytId + '/hqdefault.jpg'; };
+    thumb.src = 'https://i.ytimg.com/vi/' + ytId + '/maxresdefault.jpg';
+    poster.addEventListener('click', function () {
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0&playsinline=1&cc_load_policy=1' +
+        (FR ? '&hl=fr&cc_lang_pref=fr' : '');
+      frame.title = poster.getAttribute('aria-label');
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      poster.replaceWith(frame);
+      frame.focus();
+    });
+  }
+
   // ---------- Hero video (assets/video/hero.mp4) ----------
   // No autoplay for "reduce motion" users. If the phone blocks autoplay (e.g. Low Power Mode),
   // the poster image shows with a play button.

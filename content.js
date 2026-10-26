@@ -46,6 +46,7 @@ window.GALA = {
   instagram: "https://instagram.com/taibuchc", // full link, e.g. "https://instagram.com/taibuchc"
   facebook: "", // not used
   taibuWebsite: "https://www.taibuchc.ca",
+  directorVideo: "https://www.youtube.com/watch?v=T2aYWMj59fk", // the director's welcome video (any YouTube link)
 
   /* ---- TAIBU details (footer) ---- */
   taibuAddress: "1-27 Tapscott Road\nScarborough, ON M1B 4Y7", // use \n for a new line, e.g. "Street\nScarborough, ON A1A 1A1"
