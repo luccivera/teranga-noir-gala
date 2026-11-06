@@ -7,9 +7,9 @@
    ===================================================================== */
 window.GALA = {
   /* ---- Date & time ---- */
-  date: "", // YYYY-MM-DD once the April date is confirmed, e.g. "2027-04-24". Empty = date to be announced (no "Add to calendar")
-  doors: "18:00", // 24-hour clock, e.g. "18:00" = 6:00 PM
-  program: "19:00", // when the program begins, e.g. "19:15"
+  date: "2027-04-24", // YYYY-MM-DD. Leave "" if the date is to be announced (hides "Add to calendar")
+  doors: "17:00", // 24-hour clock, e.g. "18:00" = 6:00 PM
+  program: "18:00", // when the program begins, e.g. "19:15"
   ends: "23:59", // used for the "Add to calendar" file, e.g. "23:30"
 
   /* ---- Tickets ---- */
