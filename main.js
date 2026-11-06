@@ -76,6 +76,8 @@
   });
 
   // ---------- Add to calendar (data-ics) ----------
+  // No date in content.js yet = hide the calendar links until it's announced.
+  if (!C.date) document.querySelectorAll('[data-ics]').forEach(function (a) { a.hidden = true; });
   if (C.date) {
     var stamp = function (hm) { return C.date.replace(/-/g, '') + 'T' + (hm || '18:00').replace(':', '') + '00'; };
     var ics = [
