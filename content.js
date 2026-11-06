@@ -42,7 +42,6 @@ window.GALA = {
   phone: "416-644-3536",
 
   /* ---- Links ---- */
-  sponsorshipPackage: "assets/sponsorship-package.pdf", // drop the PDF in the assets folder
   instagram: "https://instagram.com/taibuchc", // full link, e.g. "https://instagram.com/taibuchc"
   facebook: "", // not used
   taibuWebsite: "https://www.taibuchc.ca",
